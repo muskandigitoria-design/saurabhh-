@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>SORABH COLOR PRODUCTION | Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,17 +12,18 @@
             background-color: #080c14; 
             color: white; 
             overflow-x: hidden; 
+            -webkit-tap-highlight-color: transparent;
         }
         .hero-gradient {
             background: radial-gradient(circle at top, #111827 0%, #080c14 100%);
         }
         .glow-button {
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.5);
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
             transition: all 0.3s ease;
         }
-        .glow-button:hover {
-            box-shadow: 0 0 45px rgba(34, 197, 94, 0.8);
-            transform: translateY(-3px);
+        .glow-button:active {
+            transform: scale(0.95);
+            opacity: 0.9;
         }
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
@@ -33,98 +34,101 @@
             animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
         @keyframes pulse-ring {
-            0%, 100% { opacity: 0.2; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.05); }
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
         }
         .prediction-ball {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             display: inline-block;
         }
     </style>
 </head>
-<body class="hero-gradient min-h-screen">
+<body class="hero-gradient min-h-screen flex flex-col items-center">
 
-    <nav class="p-6 flex justify-center">
-        <div class="text-[10px] tracking-[0.3em] text-gray-500 uppercase font-bold border-b border-gray-800 pb-1">
-            Verified Telegram Channel
+    <nav class="w-full p-4 flex justify-center">
+        <div class="text-[9px] tracking-[0.2em] text-gray-500 uppercase font-bold border-b border-gray-800 pb-1">
+            Official Prediction Channel
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto text-center px-6 pt-8 pb-20">
+    <main class="w-full max-w-md mx-auto text-center px-5 pt-4 pb-16">
         
-        <div class="flex justify-center mb-10 relative">
-            <div class="absolute inset-0 bg-green-500 blur-[100px] opacity-10 logo-ring"></div>
+        <div class="flex justify-center mb-6 relative">
+            <div class="absolute inset-0 bg-green-500 blur-[80px] opacity-10 logo-ring"></div>
             <div class="relative z-10">
-                <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-tr from-green-600 to-emerald-900 rounded-full flex items-center justify-center p-1 shadow-[0_0_50px_rgba(0,0,0,0.5)] border-2 border-green-500/30">
-                    <img src="https://via.placeholder.com/160/000000/FFFFFF?text=SORABH" 
+                <div class="w-28 h-28 bg-gradient-to-tr from-green-600 to-emerald-900 rounded-full flex items-center justify-center p-1 shadow-2xl border border-green-500/30">
+                    <img src="https://via.placeholder.com/150/000000/FFFFFF?text=SORABH" 
                          alt="SORABH LOGO" 
                          class="w-full h-full rounded-full object-cover border-4 border-[#080c14]">
                 </div>
-                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-green-500 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter">
+                <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-green-500 text-black text-[9px] font-black px-3 py-0.5 rounded-full uppercase">
                     Official
                 </div>
             </div>
         </div>
 
-        <div class="mb-4 inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
-            <span class="prediction-ball bg-red-500"></span>
-            <span class="prediction-ball bg-green-500"></span>
-            <span class="prediction-ball bg-purple-500"></span>
-            <span class="text-xs font-bold text-gray-300 ml-1">LIVE PREDICTIONS ACTIVE</span>
+        <div class="mb-4 inline-flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1 rounded-full">
+            <span class="flex gap-1">
+                <span class="prediction-ball bg-red-500"></span>
+                <span class="prediction-ball bg-green-500"></span>
+                <span class="prediction-ball bg-purple-500"></span>
+            </span>
+            <span class="text-[10px] font-bold text-green-400 uppercase tracking-wider">Signals Live Now</span>
         </div>
         
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
+        <h1 class="text-4xl font-extrabold mb-4 leading-[1.1] tracking-tight">
             <span class="block text-white">SORABH</span>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-green-600">
-                COLOR PRIDICTION
+                COLOR PRODUCTION
             </span>
         </h1>
 
-        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop guessing. Start winning. Get the most accurate <span class="text-green-400 font-semibold">Red, Green & Violet</span> signals from India's top prediction expert.
+        <p class="text-gray-400 text-sm md:text-base mb-8 px-4 leading-relaxed">
+            India's most accurate <span class="text-green-400 font-semibold text-white">Red, Green & Violet</span> signals. Join 50k+ members winning daily.
         </p>
 
-        <div class="flex flex-col items-center gap-6">
-            <a href="https://t.me/+CfIJCG4C6xRjNGU1" target="_blank" class="glow-button bg-green-500 hover:bg-green-400 text-black font-extrabold text-xl md:text-2xl px-10 py-5 rounded-2xl flex items-center gap-4 group">
-                <svg class="w-8 h-8 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        <div class="flex flex-col items-center w-full gap-5">
+            <a href="https://t.me/+CfIJCG4C6xRjNGU1" target="_blank" class="glow-button w-full bg-green-500 text-black font-black text-lg py-4 rounded-xl flex items-center justify-center gap-3">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                 JOIN TELEGRAM CHANNEL
             </a>
             
-            <div class="flex items-center gap-4 py-2 px-6 bg-white/5 rounded-xl border border-white/5">
-                <div class="flex -space-x-2">
-                    <div class="w-6 h-6 rounded-full bg-red-500 border-2 border-gray-900"></div>
-                    <div class="w-6 h-6 rounded-full bg-green-500 border-2 border-gray-900"></div>
-                    <div class="w-6 h-6 rounded-full bg-purple-500 border-2 border-gray-900"></div>
-                </div>
-                <span class="text-sm text-gray-400 font-medium">Over <span class="text-white">50k+</span> Successful Predictions</span>
+            <div class="flex items-center gap-3 py-2 px-4 bg-white/5 rounded-lg border border-white/5">
+                <div class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-[11px] text-gray-400 font-medium uppercase tracking-widest">5,412 Online Winning Right Now</span>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24">
-            <div class="glass-card p-8 rounded-[2rem] text-left">
-                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🏆</div>
-                <h3 class="text-xl font-bold mb-2">High Accuracy</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Our signals are based on advanced trend calculations with 90%+ success rate.</p>
+        <div class="flex flex-col gap-4 mt-12 text-left">
+            <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-2xl">🏆</div>
+                <div>
+                    <h3 class="font-bold text-white leading-none mb-1">90% Accuracy</h3>
+                    <p class="text-gray-500 text-xs italic">Signals verified by trend experts.</p>
+                </div>
             </div>
-            <div class="glass-card p-8 rounded-[2rem] text-left">
-                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">⚡</div>
-                <h3 class="text-xl font-bold mb-2">Fast Updates</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Instant notifications for every period so you never miss a winning color.</p>
+            <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-2xl">⚡</div>
+                <div>
+                    <h3 class="font-bold text-white leading-none mb-1">Instant Alerts</h3>
+                    <p class="text-gray-500 text-xs italic">Get notified 2 minutes before the result.</p>
+                </div>
             </div>
-            <div class="glass-card p-8 rounded-[2rem] text-left">
-                <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">🤝</div>
-                <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Access to our VIP community and admin support for all your queries.</p>
+            <div class="glass-card p-5 rounded-2xl flex items-start gap-4">
+                <div class="text-2xl">💰</div>
+                <div>
+                    <h3 class="font-bold text-white leading-none mb-1">Zero Cost</h3>
+                    <p class="text-gray-500 text-xs italic">All signals are 100% free to access.</p>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="pb-12 text-center">
-        <div class="max-w-xs mx-auto h-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
-        <p class="text-gray-600 text-xs tracking-widest uppercase mb-2">© 2026 SORABH COLOR PREDICTION</p>
-        <p class="text-[10px] text-gray-700 max-w-xs mx-auto">This platform provides analysis for educational purposes. Play responsibly at your own risk.</p>
+    <footer class="w-full py-8 text-center bg-black/20 mt-auto">
+        <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2026 SORABH COLOR PRODUCTION</p>
+        <p class="text-[9px] text-gray-700 px-10 mt-2">Trading involves risk. For educational information only.</p>
     </footer>
 
 </body>
