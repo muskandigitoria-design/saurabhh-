@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorabh Color Prediction | Join Now</title>
+    <title>Sorabh Color Prediction | Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; }
+        body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: white; overflow-x: hidden; }
         .hero-gradient {
             background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
         }
@@ -24,29 +24,48 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+        /* Animation for the Logo */
+        .logo-bounce {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 <body class="hero-gradient min-h-screen">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-2xl font-bold tracking-tighter text-green-500 uppercase">Sorabh Color Prediction</h1>
-        <a href="https://t.me/+CfIJCG4C6xRjNGU1" class="hidden md:block bg-white/10 px-6 py-2 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition">Contact Admin</a>
+    <nav class="p-6 flex justify-center items-center max-w-6xl mx-auto">
+        <h1 class="text-sm font-bold tracking-widest text-gray-500 uppercase">Official Landing Page</h1>
     </nav>
 
-    <main class="max-w-4xl mx-auto text-center px-6 pt-20 pb-10">
+    <main class="max-w-4xl mx-auto text-center px-6 pt-10 pb-10">
+        
+        <div class="flex justify-center mb-8">
+            <div class="logo-bounce relative">
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-tr from-green-500 to-emerald-700 rounded-full flex items-center justify-center p-1 shadow-2xl">
+                    <img src="https://via.placeholder.com/150/000000/FFFFFF?text=SCP" 
+                         alt="Sorabh Logo" 
+                         class="w-full h-full rounded-full object-cover border-4 border-[#0f172a]">
+                </div>
+                <div class="absolute inset-0 bg-green-500 blur-3xl opacity-20 -z-10"></div>
+            </div>
+        </div>
+
         <div class="mb-6 inline-block bg-green-500/10 text-green-400 px-4 py-1 rounded-full text-sm font-bold border border-green-500/20">
-            🔥 90% Accuracy Guaranteed
+            🔥 #1 Prediction Channel
         </div>
         
         <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            Master the Game with <br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
                 SORABH COLOR PRODUCTION
             </span>
         </h2>
 
         <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-            Get daily high-accuracy signals for Red, Green, and Violet. Join thousands of members winning every day on our Telegram channel.
+            Expert analysis for Red, Green, and Violet. Join our exclusive Telegram community for 90% accurate daily signals.
         </p>
 
         <div class="flex flex-col items-center gap-4">
@@ -54,31 +73,34 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" class="w-8 h-8" alt="Telegram">
                 Join Telegram Now
             </a>
-            <p class="text-gray-500 text-sm italic">Limited spots available for today's session!</p>
+            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                5,400+ Members Online
+            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
             <div class="glass-card p-8 rounded-3xl">
-                <div class="text-3xl mb-2">📊</div>
-                <h3 class="text-xl font-bold mb-2">Expert Analysis</h3>
-                <p class="text-gray-400 text-sm">Deep pattern study to ensure the highest winning probability.</p>
+                <div class="text-3xl mb-2 text-green-500">📊</div>
+                <h3 class="text-xl font-bold mb-2">90% Win Rate</h3>
+                <p class="text-gray-400 text-sm">Our algorithm focuses on low-risk, high-reward color patterns.</p>
             </div>
             <div class="glass-card p-8 rounded-3xl">
-                <div class="text-3xl mb-2">⚡</div>
-                <h3 class="text-xl font-bold mb-2">Instant Signals</h3>
-                <p class="text-gray-400 text-sm">Live predictions delivered instantly before every round starts.</p>
+                <div class="text-3xl mb-2 text-green-500">⚡</div>
+                <h3 class="text-xl font-bold mb-2">Fast Signals</h3>
+                <p class="text-gray-400 text-sm">Never miss a trade with real-time notifications on your phone.</p>
             </div>
             <div class="glass-card p-8 rounded-3xl">
-                <div class="text-3xl mb-2">💰</div>
-                <h3 class="text-xl font-bold mb-2">Free Access</h3>
-                <p class="text-gray-400 text-sm">Join our community today for 100% free prediction updates.</p>
+                <div class="text-3xl mb-2 text-green-500">💰</div>
+                <h3 class="text-xl font-bold mb-2">Zero Fees</h3>
+                <p class="text-gray-400 text-sm">Completely free to join. We never ask for money for signals.</p>
             </div>
         </div>
     </main>
 
     <footer class="p-10 text-center text-gray-600 text-sm border-t border-white/5 mt-10">
-        &copy; 2024 SORABH COLOR PRODUCTION. All Rights Reserved. <br>
-        <span class="mt-2 block">Play Responsibly. For educational purposes only.</span>
+        &copy; 2026 SORABH COLOR PRODUCTION. <br>
+        <span class="mt-2 block">Play Responsibly. For Information Purposes Only.</span>
     </footer>
 
 </body>
