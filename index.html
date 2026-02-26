@@ -9,113 +9,124 @@
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
-            background-color: #05080a; 
+            /* NEW BACKGROUND COLOR */
+            background-color: #040707; 
+            background-image: 
+                radial-gradient(circle at 50% -20%, #064e3b 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, #022c22 0%, transparent 40%);
             color: white; 
             overflow-x: hidden; 
             -webkit-tap-highlight-color: transparent;
+            min-height: 100vh;
         }
-        .bg-mesh {
-            background: radial-gradient(at 0% 0%, hsla(145,72%,47%,0.05) 0, transparent 50%), 
-                        radial-gradient(at 50% 0%, hsla(152,72%,17%,0.1) 0, transparent 50%);
-        }
-        
+
         /* GROWING BUTTON ANIMATION */
         @keyframes pulse-grow {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(34, 197, 94, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
         }
         .growing-btn {
-            animation: pulse-grow 2s infinite;
+            animation: pulse-grow 1.8s infinite ease-in-out;
             transition: all 0.3s ease;
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
         }
         .growing-btn:active {
             transform: scale(0.95);
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .glass-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.04);
+
+        .glow-overlay {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: #10b981;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 0;
         }
     </style>
 </head>
-<body class="bg-mesh min-h-screen flex flex-col items-center">
+<body class="flex flex-col items-center">
     
-    <nav class="w-full p-6 flex justify-center">
-        <div class="px-4 py-1 rounded-full border border-green-500/20 bg-green-500/5">
-            <span class="text-[10px] tracking-[0.3em] text-green-400 uppercase font-black">Verified Official Channel</span>
+    <div class="glow-overlay"></div>
+
+    <nav class="w-full p-6 flex justify-center relative z-10">
+        <div class="px-4 py-1.5 rounded-full border border-green-500/30 bg-green-500/10">
+            <span class="text-[10px] tracking-[0.3em] text-green-400 uppercase font-black">Official VIP Server</span>
         </div>
     </nav>
 
-    <main class="w-full max-w-md mx-auto text-center px-6 pt-4 pb-16">
+    <main class="w-full max-w-md mx-auto text-center px-6 pt-4 pb-16 relative z-10">
         
         <div class="flex justify-center mb-8 relative">
-            <div class="absolute inset-0 bg-green-500 blur-[100px] opacity-20"></div>
             <div class="relative">
-                <div class="w-32 h-32 bg-gradient-to-tr from-green-400 to-emerald-700 rounded-full flex items-center justify-center p-1.5 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
+                <div class="w-32 h-32 bg-gradient-to-tr from-green-400 to-emerald-900 rounded-full flex items-center justify-center p-1 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
                     <img src="https://gogamex.fun/wp-content/uploads/2026/02/yehx.jpg" 
                          alt="SOURABH LOGO" 
-                         class="w-full h-full rounded-full object-cover border-4 border-[#05080a]">
+                         class="w-full h-full rounded-full object-cover border-4 border-[#040707]">
                 </div>
-                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-black px-4 py-1 rounded-full shadow-xl">
-                    WINNER
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-green-500 text-black text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-tighter">
+                    Verified
                 </div>
             </div>
         </div>
 
-        <h1 class="text-5xl font-extrabold mb-4 tracking-tighter">
-            <span class="text-white">SOURABH</span><br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-500 to-green-600">
+        <h1 class="text-5xl font-extrabold mb-4 tracking-tighter leading-tight">
+            SOURABH<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-200">
                 PREDICTION
             </span>
         </h1>
 
-        <p class="text-gray-400 text-sm mb-10 px-6">
-            Join the elite circle for <span class="text-white font-bold">99% Accuracy</span> signals. High profit 9-level strategy updated daily.
+        <p class="text-gray-400 text-sm mb-10 px-6 font-medium">
+            Join 50,000+ winners. Get high-accuracy <span class="text-white">Color & Big/Small</span> signals every 3 minutes.
         </p>
 
         <div class="flex flex-col items-center w-full gap-6">
             <a href="https://t.me/+CfIJCG4C6xRjNGU1" target="_blank" 
-               class="growing-btn w-full bg-gradient-to-r from-green-500 to-emerald-600 text-black font-black text-xl py-5 rounded-2xl flex items-center justify-center gap-3 shadow-2xl">
+               class="growing-btn w-full text-black font-black text-xl py-5 rounded-2xl flex items-center justify-center gap-3">
                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                 JOIN TELEGRAM NOW
             </a>
             
-            <div class="flex items-center gap-3 py-2 px-5 bg-green-500/10 rounded-full border border-green-500/20">
-                <div class="h-2 w-2 rounded-full bg-green-500 animate-ping"></div>
-                <span class="text-[12px] text-green-400 font-bold uppercase tracking-widest">8,429 Active Members</span>
+            <div class="flex items-center gap-3 py-2 px-6 bg-white/5 rounded-full border border-white/10">
+                <div class="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-[12px] text-gray-300 font-bold uppercase tracking-widest">9,241 Players Online</span>
             </div>
         </div>
 
         <div class="grid gap-4 mt-12">
             <div class="glass-card p-5 rounded-3xl flex items-center gap-5">
-                <div class="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-2xl">🔥</div>
+                <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-2xl shadow-inner">🎯</div>
                 <div class="text-left">
-                    <h3 class="font-bold text-white leading-none">Fast Signals</h3>
-                    <p class="text-gray-500 text-xs mt-1">Get updates 1 minute before start.</p>
+                    <h3 class="font-bold text-white text-lg leading-none">92% Accuracy</h3>
+                    <p class="text-gray-500 text-xs mt-1">Calculated by AI Trend Analysis.</p>
                 </div>
             </div>
 
             <div class="glass-card p-5 rounded-3xl flex items-center gap-5">
-                <div class="w-12 h-12 bg-green-500/10 rounded-2xl flex items-center justify-center text-2xl">💎</div>
+                <div class="w-12 h-12 bg-green-500/20 rounded-2xl flex items-center justify-center text-2xl shadow-inner">💰</div>
                 <div class="text-left">
-                    <h3 class="font-bold text-white leading-none">VIP Access</h3>
-                    <p class="text-gray-500 text-xs mt-1">Life-time free premium analysis.</p>
+                    <h3 class="font-bold text-white text-lg leading-none">Daily Profit</h3>
+                    <p class="text-gray-500 text-xs mt-1">Proven 9-level money management.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="w-full py-10 text-center bg-black/40 border-t border-white/5 mt-auto">
-        <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-4">© 2026 SOURABH OFFICIAL</p>
-        <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="text-green-500 font-bold text-[11px] uppercase tracking-widest hover:text-green-400">
-            Powered by NEXGROWW AGENCY
+    <footer class="w-full py-10 text-center bg-black/60 border-t border-white/5 mt-auto relative z-10">
+        <p class="text-gray-600 text-[10px] tracking-[0.3em] uppercase mb-4">© 2026 SOURABH COLOR PREDICTION</p>
+        <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="text-green-500 font-bold text-[11px] uppercase tracking-widest hover:text-green-300 transition-colors">
+            Managed by NEXGROWW AGENCY
         </a>
     </footer>
 
